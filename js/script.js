@@ -1,8 +1,9 @@
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the 'printQuote' function is called
-// document
-//   .getElementById("loadQuote")
-//   .addEventListener("click", printQuote, false);
+document
+  .getElementById("loadQuote")
+  .addEventListener("click", printQuote, false);
+
 const quotes = [
   {
     quote:
@@ -40,10 +41,22 @@ const quotes = [
     year: "1999"
   }
 ];
-//uses a pseudo random number to pull a random quote from "quotes"
+//uses a pseudo random number to pull a random quote from the "quotes" array
 function getRandomQuote() {
   let RNG = Math.floor(Math.random() * 6);
   return quotes[RNG];
 }
-
-getRandomQuote();
+//constructs HTML with random quote as a string and displays to page
+function printQuote() {
+  let randomQuote = getRandomQuote();
+  let HTML = "<p class='quote'>" + randomQuote.quote + "</p>";
+  HTML += "<p class='source'>" + randomQuote.source;
+  if (randomQuote.citation.length > 0) {
+    HTML += "<span class='citation'>" + randomQuote.citation + "</span>";
+  }
+  if (randomQuote.year.length > 0) {
+    HTML += "<span class='year'>" + randomQuote.year + "</span>";
+  }
+  HTML += "</p>";
+  document.getElementById("quote-box").innerHTML = HTML;
+}
