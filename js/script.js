@@ -3,34 +3,34 @@
 document
   .getElementById("loadQuote")
   .addEventListener("click", printQuote, false);
-//dataset for quotes, their author, and citation and year if available
+//dataset for each quote, their author, and citation and year if available
 const quotes = [
   {
     quote:
       "Fairytales don't teach children that monsters exist, they already know that monsters exist. Fairy tales teach children that monsters can be killed.",
     source: "G.K. Chesterton",
     citation: "",
-    year: ""
+    year: NaN
   },
   {
     quote:
       "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.",
     source: "Douglas Adams",
     citation: "Mostly Harmless",
-    year: "1992"
+    year: 1992
   },
   {
     quote: "Just because you are offended does not mean you're right.",
     source: "Ricky Gervais",
     citation: "Twitter",
-    year: "2013"
+    year: 2013
   },
   {
     quote:
       "The whole problem with the world is that fools and fanatics are always so certain of themselves, and wiser people so full of doubts.",
     source: "Bertrand Russell",
     citation: "A Word a Day",
-    year: "2002"
+    year: 2002
   },
   {
     quote:
@@ -38,7 +38,7 @@ const quotes = [
     source: "Arthur C. Clarke",
     citation:
       "Visions: How Science Will Revolutionize the Twenty-First Century",
-    year: "1999"
+    year: 1999
   }
 ];
 //uses a pseudo random number to pull a random quote from the "quotes" array
@@ -55,7 +55,7 @@ function printQuote() {
   if (randomQuote.citation.length > 0) {
     HTML += "<span class='citation'>" + randomQuote.citation + "</span>";
   }
-  if (randomQuote.year.length > 0) {
+  if (randomQuote.year > 0) {
     HTML += "<span class='year'>" + randomQuote.year + "</span>";
   }
   HTML += "</p>";
