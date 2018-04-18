@@ -86,3 +86,8 @@ function setBgColor() {
   let bgColor = "rgb(" + x + "," + y + "," + z + ")";
   document.body.style.background = bgColor;
 }
+
+function timer() {
+  window.setInterval(printQuote, 30000);
+}
+timer();
