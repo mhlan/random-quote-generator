@@ -58,6 +58,16 @@ body {
   font-style: normal;
 }
 
+.tags {
+  position: relative;
+  display: block;
+}
+
+#tag {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
