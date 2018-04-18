@@ -3,7 +3,7 @@
 document
   .getElementById("loadQuote")
   .addEventListener("click", printQuote, false);
-
+//dataset for quotes, their author, and citation and year if available
 const quotes = [
   {
     quote:
@@ -47,6 +47,7 @@ function getRandomQuote() {
   return quotes[RNG];
 }
 //constructs HTML with random quote as a string and displays to page
+//if the values in citation/year are empty strings, doesn't generate corresponding HTML
 function printQuote() {
   let randomQuote = getRandomQuote();
   let HTML = "<p class='quote'>" + randomQuote.quote + "</p>";
