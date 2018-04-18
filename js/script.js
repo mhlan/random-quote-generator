@@ -43,7 +43,7 @@ const quotes = [
 ];
 //uses a pseudo random number to pull a random quote from the "quotes" array
 function getRandomQuote() {
-  let RNG = Math.floor(Math.random() * 6);
+  let RNG = Math.floor(Math.random() * 5);
   return quotes[RNG];
 }
 //constructs HTML with random quote as a string and displays to page
