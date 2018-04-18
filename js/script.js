@@ -42,5 +42,4 @@ function setBgColor() {
 function timer() {
   window.setInterval(printQuote, 30000);
 }
-
 timer();
